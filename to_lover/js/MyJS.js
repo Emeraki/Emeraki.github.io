@@ -21,22 +21,22 @@ var love = setInterval(function () {
 //计算天数
 function DateDiff(sDate1, sDate2) {    //sDate1和sDate2是xxxx-xx-xx格式
     var aDate, oDate1, oDate2, iDays
-    aDate = sDate1.split("-")
-    oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0])    //转换为12-18-2002格式
-    aDate = sDate2.split("-")
-    oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0])
+    aDate = sDate1.split("/")
+    oDate1 = new Date(aDate[1] + '/' + aDate[2] + '/' + aDate[0])    //转换为12-18-2002格式
+    aDate = sDate2.split("/")
+    oDate2 = new Date(aDate[1] + '/' + aDate[2] + '/' + aDate[0])
     iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24)    //把相差的毫秒数转换为天数
     return iDays
 }
 
 //调用上面的DateDiff，返回计算的天数
 function love_days() {
-    love_begin = "2019-12-25"
+    love_begin = "2019/12/25"
     var datetime = new Date();
     var year = datetime.getFullYear();
     var month = datetime.getMonth() + 1 < 10 ? "0" + (datetime.getMonth() + 1) : datetime.getMonth() + 1;
     var date = datetime.getDate() < 10 ? "0" + datetime.getDate() : datetime.getDate();
-    love_now = year + "-" + month + "-" + date
+    love_now = year + "/" + month + "/" + date
     var days = DateDiff(love_begin, love_now);
     return days
 
