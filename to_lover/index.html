@@ -11,8 +11,8 @@
     <script type="text/javascript" src="lib/md5.js"></script>
 
     <!--引入css和js-->
-    <script type="text/javascript" src="js/js_test.js"></script>
-    <link rel="stylesheet" href="css/css_test.css">
+    <script type="text/javascript" src="js/MyJS.js"></script>
+    <link rel="stylesheet" href="css/MyCss.css">
 
     <!--引入网页icon和收藏夹icon-->
     <link rel="icon" href="resource/bird.png" type="image/x-icon">
@@ -24,9 +24,9 @@
         function loopy() {
             var sWord =""
             while ($.md5(sWord) != "a27cc431ba1b50bd6a1e84439f30ba02") {//设置密码
-                sWord = prompt("⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄   (害羞.jpg)")
+                sWord = prompt("⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄   (害羞.jpg ")
             }
-            alert("啦啦啦 小海鸥来啦")
+            alert("啦啦啦，小海鸥来啦")
         }
     </script>
 
@@ -36,7 +36,21 @@
 <body>
 
 
-<div class="bg_heart">I LOVE YOU</div>
+<div class="bg_heart">
+    <img src="resource/lover.jpg" alt="我和小海鸥" title="从重庆回来的高铁上" class="lover">
+    <h3>岁月流逝并未带来失落</h3>
+    <h3>它迎来了一番打磨与提携</h3>
+    <h3>&hearts;</h3>
+    <br><br><br><br>
+
+    <h3 id="compute_days"></h3>
+    <h3>&hearts;</h3>
+    <br><br><br><br>
+
+
+    <script>wirte_to_dom()</script>
+
+</div>
 
 </body>
 </html>
