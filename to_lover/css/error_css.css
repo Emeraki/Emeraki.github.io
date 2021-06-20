@@ -1,0 +1,51 @@
+body {
+    font-size: 30px;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+div {
+    width: 400px
+}
+
+#branch-1,
+#branch-2,
+#branch-3,
+#branch-4 {
+    animation: ease-out 8s alternate infinite branchs;
+    transform: translateY(-3px);
+}
+
+@keyframes branchs {
+    from {
+        transform: rotate(0) translate(4px)
+    }
+    to {
+        transform: translate(3px)
+    }
+}
+
+#bird-1,
+#bird-2,
+#bird-3,
+#bird-4 {
+    animation: ease-in-out 8s alternate infinite birds;
+}
+
+@keyframes birds {
+    from {
+        transform: rotate(0) translate(0)
+    }
+    to {
+        transform: rotate(-3deg) translate(10px, 20px)
+    }
+}
+
+/* #smile {
+  transform: rotate(-90deg);
+  display: inline-block;
+} */
